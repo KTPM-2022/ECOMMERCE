@@ -1,0 +1,99 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 152px;
+  font-family: Domine;
+}
+
+.container {
+  width: 1180px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -12px;
+}
+
+.card-item {
+  position: relative;
+  height: 405px;
+  min-width: 300px;
+  padding: 0 12px;
+  margin-bottom: 57px;
+  flex: 1;
+}
+
+.card-item-container {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title {
+  position: absolute;
+  bottom: 84px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--white);
+  &::before {
+    position: absolute;
+    bottom: -6px;
+    transform: translateX(-50%);
+    left: 50%;
+    content: '';
+    border: solid 1px var(--white-six);
+    width: 215px;
+  }
+}
+
+.shopnow-btn {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 40px;
+  padding: 9px 29px;
+  color: var(--white);
+}
+
+.outfit-of-the-week {
+  position: relative;
+  height: 513px;
+  width: 100%;
+  background-image: url('../../assets/images/ladies.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 19px;
+}
+
+.title-week {
+  position: absolute;
+  font-size: 48px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.94;
+  letter-spacing: normal;
+  text-align: right;
+  color: var(--white);
+  top: 71px;
+  right: 83px;
+}
+
+.shopnow-btn-week {
+  position: absolute;
+  right: 73px;
+  bottom: 47px;
+  padding: 20px 56px;
+  box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.12);
+  background-color: var(--pale-orange);
+  color: var(--white);
+}

@@ -1,0 +1,37 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 395px;
+  & ~ .form-group {
+    margin-top: 24px;
+  }
+}
+
+.label {
+  font-size: 12px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: var(--dark-grey);
+}
+
+.input {
+  width: 395px;
+  padding: 12px 24px;
+  background-color: var(--white-two);
+  border: 1px solid transparent;
+  &:focus,
+  &:not(:placeholder-shown) {
+    border-color: var(--greyish-two);
+  }
+}
+
+.error {
+  font-size: 10px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.2;
+  letter-spacing: normal;
+  color: var(--strawberry);
+}

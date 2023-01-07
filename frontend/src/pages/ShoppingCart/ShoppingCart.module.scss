@@ -1,0 +1,143 @@
+.wrapper {
+  margin-top: 152px;
+  margin-bottom: 53px;
+}
+
+.title {
+  margin-bottom: 36px;
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: var(--dark-grey);
+}
+
+.info-row {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 0.5px var(--brown-grey);
+}
+
+.info-item-row{
+  height: 133px;
+}
+
+.info-title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: var(--dark-grey);
+}
+
+.info-photo {
+  width: 100%;
+  height: 100%;
+}
+
+.info-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-name {
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: var(--dark-grey);
+}
+
+.info-action {
+  display: flex;
+}
+
+.info-action-btn {
+  padding-right: 12px;
+  position: relative;
+  & ~ .info-action-btn::before {
+    content: '';
+    position: absolute;
+    border: solid 0.5px var(--brown-grey);
+    height: 15px;
+    left: -6px;
+  }
+}
+
+.info-amount, .info-quantity ,.info-size{
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: right;
+  color: var(--dark-grey);
+}
+
+.info-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-body {
+  display: flex;
+  width: 100%;
+}
+
+.total-title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: var(--dark-grey);
+}
+
+.total-body {
+  padding: 32px 28px 22px 30px;
+  background-color: #f9f9f9;
+}
+
+.total-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+}
+
+.submit-btn {
+  margin-top: 13px;
+  height: 49px;
+  width: 100%;
+}
+
+.subtotal {
+  position: relative;
+  padding-top: 22px;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--dark-grey);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    width: 100%;
+    border: 1px solid black;
+  }
+}

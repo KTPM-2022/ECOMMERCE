@@ -1,0 +1,128 @@
+.wrapper {
+  object-fit: contain;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  background-color: var(--white);
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.08), 0 -1px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.top,
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.top {
+  height: 121px;
+}
+
+.bottom {
+  height: 64px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 1180px;
+    border: 0.8px solid var(--dark-grey);
+    opacity: 0.12;
+    bottom: 63.5px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 1180px;
+  align-items: center;
+}
+
+.search {
+  position: relative;
+  width: 181px;
+  height: 35px;
+  padding: 5px 12px 5px 15px;
+  border-radius: 17px;
+  border: solid 1px var(--greyish-two);
+}
+
+.search-input {
+  height: 100%;
+  width: 80%;
+  overflow: hidden;
+}
+
+.search-icon {
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  object-fit: contain;
+  opacity: 0.6;
+}
+
+.logo {
+  width: 96px;
+  height: 20px;
+  padding: 0.3px 0.2px 0.4px 0.5px;
+  object-fit: contain;
+}
+
+.info {
+  display: flex;
+}
+
+.register-btn {
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: var(--greyish-brown);
+}
+
+.btn {
+  margin-right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn {
+  padding: 10px 30px;
+  border-radius: 100px;
+  border: solid 1px var(--pale-orange);
+  color: var(--pale-orange);
+}
+
+.nav {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-item {
+  line-height: 1.57;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--greyish-two);
+}
+
+.media-icon {
+  color: var(--greyish-two);
+}
+
+.media-icon ~ .media-icon {
+  margin-left: 15px;
+}
+
+.policy-item ~ .policy-item {
+  margin-left: 15px;
+}
+
+.policy-item {
+  opacity: 0.4;
+  font-size: 12px;
+  line-height: 1.83;
+  color: var(--dark-grey);
+}

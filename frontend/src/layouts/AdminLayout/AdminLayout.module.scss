@@ -1,0 +1,14 @@
+.wrapper {
+  background-color: var(--white-two);
+  min-height: 100vh;
+  display: flex;
+}
+
+.sidebar{
+  width: 15%;
+}
+
+.content{
+  border-left: 1px solid var(--white-three);
+  width: 85%;
+}
