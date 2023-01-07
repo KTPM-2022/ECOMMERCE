@@ -47,6 +47,7 @@ function CreateNewPassword() {
       .then(() => {
         dispatch(clearError());
         setSuccessmsg('Your password has been changed successfully. Please log in again');
+        navigate('/');
       })
       .catch((error) => {
         dispatch(setError(error.response.data));

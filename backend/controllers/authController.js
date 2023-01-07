@@ -56,9 +56,9 @@ async function forgotPassword(req, res) {
     res.status(404).send('Please add all fields');
     return;
   }
-  const user = await forgotPasswordService(email);
-  if (user) {
-    res.status(200).send('Send link forgotpassword to user successfully');
+  const token = await forgotPasswordService(email);
+  if (token) {
+    res.status(200).send(token);
   } else {
     res.status(404).send('User not found');
   }

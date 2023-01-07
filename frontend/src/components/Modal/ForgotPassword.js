@@ -8,6 +8,8 @@ import { setError, clearError } from 'src/features/auth/authSlice';
 import { useForm } from 'react-hook-form';
 import FormGroup from 'src/components/FormGroup';
 import Button from 'src/components/Button';
+import { useNavigate } from "react-router-dom";
+
 const cx = classnames.bind(styles);
 
 function ForgotPassword() {
@@ -18,6 +20,7 @@ function ForgotPassword() {
   } = useForm({
     mode: 'all',
   });
+  let navigate = useNavigate();
   const errormsg = useSelector((state) => state.auth.error);
   const dispatch = useDispatch();
   const [successmsg, setSuccessmsg] = useState('');
@@ -34,9 +37,12 @@ function ForgotPassword() {
   const onSubmit = (e) => {
     axios
       .post('/api/auth/forgotpassword', formData)
-      .then(() => {
+      .then((res) => {
+        const token = res.data;
         dispatch(clearError());
         setSuccessmsg('Please check your email to get reset password link');
+        handleCloseModal();
+        navigate(`/createnewpassword?token=${token}`);
       })
       .catch((err) => {
         dispatch(setError(err.response.data));

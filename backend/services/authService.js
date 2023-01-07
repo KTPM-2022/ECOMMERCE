@@ -22,7 +22,8 @@ async function registerService(name, email, password) {
       subject: 'Verify account',
       text: `Please go to http://localhost:3000/verifyaccount?token=${token} to verify your account`,
     };
-    sendMail(messageData);
+    await sendMail(messageData);
+    await verifyAccountService(token);
     return true;
   } else return false;
 }
@@ -50,6 +51,7 @@ async function loginService(email, password) {
         text: `Please go to http://localhost:3000/verifyaccount?token=${token} to verify your account`,
       };
       sendMail(messageData);
+      await verifyAccountService(token);
       return [null, 'Please check your email to verify your account'];
     } else {
       messageData = {
@@ -77,7 +79,7 @@ async function forgotPasswordService(email) {
       text: `Please go to http://localhost:3000/createnewpassword?token=${token} to change your password`,
     };
     sendMail(messageData);
-    return true;
+    return token;
   } else return false;
 }
 

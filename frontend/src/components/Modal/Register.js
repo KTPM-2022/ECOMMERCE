@@ -39,7 +39,7 @@ function Register() {
       .post('/api/auth/register', formData)
       .then(() => {
         dispatch(clearError());
-        setSuccessmsg('Please check your email to verify your account');
+        setSuccessmsg('Register successfully');
       })
       .catch((err) => {
         dispatch(setError(err.response.data));
